@@ -7,4 +7,6 @@
     <dimen name="height_250">250dp</dimen>
     <dimen name="height_40">40sp</dimen>
     <dimen name="width_40">40sp</dimen>
+    <dimen name="Fonte_15sp">15sp</dimen>
+    <dimen name="Margem_16">16dp</dimen>
 </resources>
