@@ -8,23 +8,12 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/dimens_125"
-        android:layout_height="@dimen/dimens_125"
-        android:layout_margin="@dimen/dimens_16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:contentDescription="Imagem Rick Morty"
+        android:scaleType="centerCrop"
         android:src="@drawable/rick_morty"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvmensagemAbertura"
-        android:layout_width="@dimen/dimens_0"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dimens_16"
-        android:text="@string/msg_abertura"
-        android:textSize="@dimen/dimens_12"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/imageView"
         app:layout_constraintTop_toTopOf="parent" />
 
 
