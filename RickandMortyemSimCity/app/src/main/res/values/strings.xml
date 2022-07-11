@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Rick and Morty em SimCity</string>
+    <string name="msg_abertura">Bem vindo ao mundo de Rick Morty!</string>
+</resources>

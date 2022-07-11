@@ -1,0 +1,36 @@
+package br.com.zup.rickandmortyemsimcity.ui.home.viewmodel
+
+import br.com.zup.rickandmortyemsimcity.data.model.APIResponse
+import br.com.zup.rickandmortyemsimcity.data.model.Result
+import br.com.zup.rickandmortyemsimcity.data.model.Info
+import br.com.zup.rickandmortyemsimcity.data.model.Location
+import br.com.zup.rickandmortyemsimcity.data.model.Origin
+import android.util.Log
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
+import br.com.zup.rickandmortyemsimcity.data.RetrofitService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+
+class HomeViewModel : ViewModel() {
+    private val _apiResponse = MutableLiveData<List<Result>>()
+    val apiResponse = _apiResponse
+
+    fun getCharacters() {
+        viewModelScope.launch {
+            try {
+                val response = withContext(Dispatchers.IO) {
+                    RetrofitService.apiService.getCharacterss()
+                }
+                apiResponse.value = response.results
+            } catch (ex: Exception) {
+                Log.i("Error", "Error ----- > ${ex.message}")
+            }
+        }
+    }
+
+}
+
