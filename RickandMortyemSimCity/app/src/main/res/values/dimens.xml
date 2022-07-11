@@ -5,4 +5,6 @@
     <dimen name="dimens_0">0dp</dimen>
     <dimen name="dimens_12">12sp</dimen>
     <dimen name="height_250">250dp</dimen>
+    <dimen name="height_40">40sp</dimen>
+    <dimen name="width_40">40sp</dimen>
 </resources>

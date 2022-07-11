@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/dark_blue">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.detail.view.DetailActivity">
+
+        <ImageView
+            android:id="@+id/ivDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_250"
+            android:contentDescription="@string/image_character"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/rick_morty" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="Nome:"
+            android:textSize="@dimen/fontSize_15"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@id/iv_characterImageDetail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_star" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="Status: Alive"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_star" />
+
+        <TextView
+            android:id="@+id/tvSpecies"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="Espécie: "
+            android:textSize="@dimen/fontSize_15"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@id/tvStatus"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_star" />
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            tools:text="Gênero:"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_16"
+            app:layout_constraintTop_toBottomOf="@id/tvSpecies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_star" />
+
+        <ImageView
+            android:id="@+id/icon_star"
+            android:layout_width="@dimen/width_40"
+            android:layout_height="@dimen/height_40"
+            android:layout_margin="@dimen/margin_16"
+            android:src="@drawable/ic_baseline_star_rate_40"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivDetail"
+            app:layout_constraintVertical_bias="0.0"
+            android:contentDescription="@string/text_estrela" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

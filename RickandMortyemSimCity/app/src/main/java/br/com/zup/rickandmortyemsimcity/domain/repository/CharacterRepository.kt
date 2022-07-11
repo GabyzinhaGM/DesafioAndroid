@@ -25,7 +25,15 @@ class CharacterRepository {
         } catch (ex: Exception) {
             Log.i("Error", "Error ----- > ${ex.message}")
         }
-        return listOf<Character>(Character(name = "", status = "", gender = "", image = ""))
+        return listOf<Character>(
+            Character(
+                name = "",
+                species = "",
+                status = "",
+                gender = "",
+                image = ""
+            )
+        )
     }
 
     private fun toListCharacter(results: List<Result>): List<Character> {
@@ -33,7 +41,13 @@ class CharacterRepository {
 
         for (i in results) {
             characters.add(
-                Character(name = i.name, status = i.status, gender = i.gender, image = i.image)
+                Character(
+                    name = i.name,
+                    species = i.species,
+                    status = i.status,
+                    gender = i.gender,
+                    image = i.image
+                )
             )
         }
         return characters

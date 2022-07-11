@@ -5,7 +5,8 @@ import kotlinx.parcelize.Parcelize
 
 @Parcelize
 data class Character(
-    var name: String = "",
+    var name: String,
+    var species: String,
     var status: String,
     var gender: String,
     var image: String
